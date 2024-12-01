@@ -20,9 +20,11 @@ def download_file():
     if not url:
         return jsonify({"error": "No URL provided"}), 400
 
-    try:
-        file_name
+    file_path = os.path.join(DOWNLOAD_DIR, "video.mp4")
 
+    result = subprocess.run(f"yt-dlp -f 'bestvideo+bestaudio/best' --recode-video mp4 -o {file_path} {url}", shell=True, capture_output=True, text=True)
+
+    return send_file(file_path, as_attachment=True);
 
 
 @app.route('/')
