@@ -4,6 +4,6 @@
 
 ## Usage: 
 
-Simply head to [the website]() and enter any youtube video link!
+Simply head to [the website](http://youtube-video-downloader.duckdns.org) and enter any youtube video link!
 
 
