@@ -12,7 +12,7 @@ app.app_context()
 DOWNLOAD_DIR = "downloads"
 os.makedirs(DOWNLOAD_DIR, exist_ok=True)
 
-@app.route('/download', methods=['POST'])
+@app.route('/API/download', methods=['POST'])
 def download_file():
     data = request.json 
     url = data.get("url")

@@ -7,7 +7,7 @@ function buttonClick()
     url = textbox.value;
     textbox.value = "";
 
-    fetch('http://127.0.0.1:5000/download', {
+    fetch('/API/download', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
